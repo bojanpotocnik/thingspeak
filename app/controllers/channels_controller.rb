@@ -363,6 +363,14 @@ class ChannelsController < ApplicationController
       feed.field6 = params[:field6] || params['6'] if params[:field6] || params['6']
       feed.field7 = params[:field7] || params['7'] if params[:field7] || params['7']
       feed.field8 = params[:field8] || params['8'] if params[:field8] || params['8']
+      feed.field9 = params[:field9] || params['9'] if params[:field9] || params['9']
+      feed.field10 = params[:field10] || params['10'] if params[:field10] || params['10']
+      feed.field11 = params[:field11] || params['11'] if params[:field11] || params['11']
+      feed.field12 = params[:field12] || params['12'] if params[:field12] || params['12']
+      feed.field13 = params[:field13] || params['13'] if params[:field13] || params['13']
+      feed.field14 = params[:field14] || params['14'] if params[:field14] || params['14']
+      feed.field15 = params[:field15] || params['15'] if params[:field15] || params['15']
+      feed.field16 = params[:field16] || params['16'] if params[:field16] || params['16']
       feed.status = params[:status] if params[:status]
       feed.latitude = params[:lat] if params[:lat]
       feed.latitude = params[:latitude] if params[:latitude]
@@ -477,6 +485,14 @@ class ChannelsController < ApplicationController
     field6_column = -1
     field7_column = -1
     field8_column = -1
+    field9_column = -1
+    field10_column = -1
+    field11_column = -1
+    field12_column = -1
+    field13_column = -1
+    field14_column = -1
+    field15_column = -1
+    field16_column = -1
     if headers
       csv_array[0].each_with_index do |column, index|
         entry_id_column = index if column.downcase == 'entry_id'
@@ -493,6 +509,14 @@ class ChannelsController < ApplicationController
         field6_column = index if column.downcase == 'field6'
         field7_column = index if column.downcase == 'field7'
         field8_column = index if column.downcase == 'field8'
+        field9_column = index if column.downcase == 'field9'
+        field10_column = index if column.downcase == 'field10'
+        field11_column = index if column.downcase == 'field11'
+        field12_column = index if column.downcase == 'field12'
+        field13_column = index if column.downcase == 'field13'
+        field14_column = index if column.downcase == 'field14'
+        field15_column = index if column.downcase == 'field15'
+        field16_column = index if column.downcase == 'field16'
       end
     end
 
@@ -526,6 +550,14 @@ class ChannelsController < ApplicationController
         feed.latitude = row.delete_at(latitude_column) if latitude_column > 0
 
         # add the fields if they are from named columns, using reverse order
+        feed.field16 = row.delete_at(field16_column) if field16_column != -1
+        feed.field15 = row.delete_at(field15_column) if field15_column != -1
+        feed.field14 = row.delete_at(field14_column) if field14_column != -1
+        feed.field13 = row.delete_at(field13_column) if field13_column != -1
+        feed.field12 = row.delete_at(field12_column) if field12_column != -1
+        feed.field11 = row.delete_at(field11_column) if field11_column != -1
+        feed.field10 = row.delete_at(field10_column) if field10_column != -1
+        feed.field9 = row.delete_at(field9_column) if field9_column != -1
         feed.field8 = row.delete_at(field8_column) if field8_column != -1
         feed.field7 = row.delete_at(field7_column) if field7_column != -1
         feed.field6 = row.delete_at(field6_column) if field6_column != -1
@@ -556,10 +588,18 @@ class ChannelsController < ApplicationController
         feed.field6 = row[6] if feed.field6.blank?
         feed.field7 = row[7] if feed.field7.blank?
         feed.field8 = row[8] if feed.field8.blank?
-        feed.latitude = row[9] if feed.latitude.blank?
-        feed.longitude = row[10] if feed.longitude.blank?
-        feed.elevation = row[11] if feed.elevation.blank?
-        feed.status = row[12] if feed.status.blank?
+        feed.field9 = row[9] if feed.field9.blank?
+        feed.field10 = row[10] if feed.field10.blank?
+        feed.field11 = row[11] if feed.field11.blank?
+        feed.field12 = row[12] if feed.field12.blank?
+        feed.field13 = row[13] if feed.field13.blank?
+        feed.field14 = row[14] if feed.field14.blank?
+        feed.field15 = row[15] if feed.field15.blank?
+        feed.field16 = row[16] if feed.field16.blank?
+        feed.latitude = row[17] if feed.latitude.blank?
+        feed.longitude = row[18] if feed.longitude.blank?
+        feed.elevation = row[19] if feed.elevation.blank?
+        feed.status = row[20] if feed.status.blank?
 
         # save channel and feed
         feed.save
@@ -578,7 +618,7 @@ class ChannelsController < ApplicationController
 
     # only allow these params
     def channel_params
-      params.require(:channel).permit(:name, :url, :description, :metadata, :latitude, :longitude, :field1, :field2, :field3, :field4, :field5, :field6, :field7, :field8, :elevation, :public_flag, :status, :video_id, :video_type)
+      params.require(:channel).permit(:name, :url, :description, :metadata, :latitude, :longitude, :field1, :field2, :field3, :field4, :field5, :field6, :field7, :field8, :field9, :field10, :field11, :field12, :field13, :field14, :field15, :field16, :elevation, :public_flag, :status, :video_id, :video_type)
     end
 
     # determine if the date can be parsed

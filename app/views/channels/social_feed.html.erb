@@ -13,7 +13,7 @@
 
     $(document).on('page:load ready', function() {
       var html = '';
-      var field1, field2, field3, field4, field5, field6, field7, field8;
+      var field1, field2, field3, field4, field5, field6, field7, field8, field9, field10, field11, field12, field13, field14, field15, field16;
 
       // get the data with a webservice call
       $.getJSON('<%= "#{@domain}channels/#{params[:channel_id]}/feed.json?callback=?&offset=0&results=10&location=true&status=true" %>', function(data) {
@@ -27,6 +27,14 @@
         if (data.channel.field6) { field6 = data.channel.field6; }
         if (data.channel.field7) { field7 = data.channel.field7; }
         if (data.channel.field8) { field8 = data.channel.field8; }
+        if (data.channel.field9) { field9 = data.channel.field9; }
+        if (data.channel.field10) { field10 = data.channel.field10; }
+        if (data.channel.field11) { field11 = data.channel.field11; }
+        if (data.channel.field12) { field12 = data.channel.field12; }
+        if (data.channel.field13) { field13 = data.channel.field13; }
+        if (data.channel.field14) { field14 = data.channel.field14; }
+        if (data.channel.field15) { field15 = data.channel.field15; }
+        if (data.channel.field16) { field16 = data.channel.field16; }
 
         // iterate through each feed
         $.each(data.feeds.reverse(), function() {
@@ -40,6 +48,14 @@
             if (this.field6) { html += '<div class="indent">' + data.channel.field6 + ': ' + this.field6 + '</div>'; }
             if (this.field7) { html += '<div class="indent">' + data.channel.field7 + ': ' + this.field7 + '</div>'; }
             if (this.field8) { html += '<div class="indent">' + data.channel.field8 + ': ' + this.field8 + '</div>'; }
+            if (this.field9) { html += '<div class="indent">' + data.channel.field9 + ': ' + this.field9 + '</div>'; }
+            if (this.field10) { html += '<div class="indent">' + data.channel.field10 + ': ' + this.field10 + '</div>'; }
+            if (this.field11) { html += '<div class="indent">' + data.channel.field11 + ': ' + this.field11 + '</div>'; }
+            if (this.field12) { html += '<div class="indent">' + data.channel.field12 + ': ' + this.field12 + '</div>'; }
+            if (this.field13) { html += '<div class="indent">' + data.channel.field13 + ': ' + this.field13 + '</div>'; }
+            if (this.field14) { html += '<div class="indent">' + data.channel.field14 + ': ' + this.field14 + '</div>'; }
+            if (this.field15) { html += '<div class="indent">' + data.channel.field15 + ': ' + this.field15 + '</div>'; }
+            if (this.field16) { html += '<div class="indent">' + data.channel.field16 + ': ' + this.field16 + '</div>'; }
             if (this.status) { html += '<div class="indent"><span class="status">"' + this.status + '"</span></div>'; }
             html += '<div class="indent small"><abbr class="timeago" title="' + this.created_at + '">' + this.created_at + '</abbr></div>';
             html += '<div>&nbsp;</div>';
@@ -68,6 +84,14 @@
               if (data.field6) { html += '<div class="indent">' + field6 + ': ' + data.field6 + '</div>'; }
               if (data.field7) { html += '<div class="indent">' + field7 + ': ' + data.field7 + '</div>'; }
               if (data.field8) { html += '<div class="indent">' + field8 + ': ' + data.field8 + '</div>'; }
+              if (data.field9) { html += '<div class="indent">' + field9 + ': ' + data.field9 + '</div>'; }
+              if (data.field10) { html += '<div class="indent">' + field10 + ': ' + data.field10 + '</div>'; }
+              if (data.field11) { html += '<div class="indent">' + field11 + ': ' + data.field11 + '</div>'; }
+              if (data.field12) { html += '<div class="indent">' + field12 + ': ' + data.field12 + '</div>'; }
+              if (data.field13) { html += '<div class="indent">' + field13 + ': ' + data.field13 + '</div>'; }
+              if (data.field14) { html += '<div class="indent">' + field14 + ': ' + data.field14 + '</div>'; }
+              if (data.field15) { html += '<div class="indent">' + field15 + ': ' + data.field15 + '</div>'; }
+              if (data.field16) { html += '<div class="indent">' + field16 + ': ' + data.field16 + '</div>'; }
               if (data.status) { html += '<div class="indent"><span class="status">"' + data.status + '"</span></div>'; }
               html += '<div class="indent small"><abbr class="timeago" title="' + data.created_at + '">' + data.created_at + '</abbr></div>';
               html += '<div>&nbsp;</div>';

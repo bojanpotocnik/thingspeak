@@ -24,7 +24,7 @@
     </ul>
     <br><br>
     <h4>Channels API</h4>
-    To read and write to a ThingSpeak Channel, your application must make requests to the ThingSpeak API using HTTP requests. Each ThingSpeak Channel allows for 8 fields of data (both numeric and alphanumeric formats), location information, and a status update. Each entry is stored with a date and time stamp and is assigned a unique Entry ID (entry_id). After the data is stored, you can retrieve the data by time selection or by Entry ID. In addition to storing and retrieving numeric and alphanumeric data, the ThingSpeak API allows for numeric data processing such as timescaling, averaging, median, summing, and rounding. The channel feeds supports JSON, XML, and CSV formats for integration into applications.
+    To read and write to a ThingSpeak Channel, your application must make requests to the ThingSpeak API using HTTP requests. Each ThingSpeak Channel allows for 16 fields of data (both numeric and alphanumeric formats), location information, and a status update. Each entry is stored with a date and time stamp and is assigned a unique Entry ID (entry_id). After the data is stored, you can retrieve the data by time selection or by Entry ID. In addition to storing and retrieving numeric and alphanumeric data, the ThingSpeak API allows for numeric data processing such as timescaling, averaging, median, summing, and rounding. The channel feeds supports JSON, XML, and CSV formats for integration into applications.
     <br><br>
 
     <hr />
@@ -34,7 +34,7 @@
     <ul>
       <li><strong>Channel </strong>- The name for where data can be inserted or retrieved within the ThingSpeak API,&nbsp;identified&nbsp;by a numerical Channel ID</li>
       <li><strong>Channel ID </strong>- Every channel has a unique Channel ID. The Channel ID number is used to identify the channel when your application reads data from the channel</li>
-      <li><strong>Field </strong>- One of eight specific locations for data inside of a channel, identified by a number between 1 to 8 – A field can store numeric data from sensors or&nbsp;alphanumeric&nbsp;strings from serial devices or RFID readers</li>
+      <li><strong>Field </strong>- One of eight specific locations for data inside of a channel, identified by a number between 1 to 16 – A field can store numeric data from sensors or&nbsp;alphanumeric&nbsp;strings from serial devices or RFID readers</li>
       <li><strong>Status </strong>- A short status message to augment the data stored in a channel</li>
       <li><strong>Location </strong>- The latitude, longitude, and elevation&nbsp;of where data is being sent from</li>
       <li><strong>Feed </strong>- The collective name for the data stored inside a channel, which may be any combination of field data, status updates, and location info</li>

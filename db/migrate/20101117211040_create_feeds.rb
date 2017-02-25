@@ -11,6 +11,14 @@ class CreateFeeds < ActiveRecord::Migration
       t.text :data6
       t.text :data7
       t.text :data8
+      t.text :data9
+      t.text :data10
+      t.text :data11
+      t.text :data12
+      t.text :data13
+      t.text :data14
+      t.text :data15
+      t.text :data16
 
       t.timestamps
     end

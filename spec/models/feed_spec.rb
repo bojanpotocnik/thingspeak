@@ -12,6 +12,14 @@
 #  field6     :string(255)
 #  field7     :string(255)
 #  field8     :string(255)
+#  field9     :string(255)
+#  field10    :string(255)
+#  field11    :string(255)
+#  field12    :string(255)
+#  field13    :string(255)
+#  field14    :string(255)
+#  field15    :string(255)
+#  field16    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #  entry_id   :integer

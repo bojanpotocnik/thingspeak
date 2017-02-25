@@ -17,6 +17,14 @@
 #  field6                    :string(255)
 #  field7                    :string(255)
 #  field8                    :string(255)
+#  field9                    :string(255)
+#  field10                   :string(255)
+#  field11                   :string(255)
+#  field12                   :string(255)
+#  field13                   :string(255)
+#  field14                   :string(255)
+#  field15                   :string(255)
+#  field16                   :string(255)
 #  scale1                    :integer
 #  scale2                    :integer
 #  scale3                    :integer
@@ -25,6 +33,14 @@
 #  scale6                    :integer
 #  scale7                    :integer
 #  scale8                    :integer
+#  scale9                    :integer
+#  scale10                   :integer
+#  scale11                   :integer
+#  scale12                   :integer
+#  scale13                   :integer
+#  scale14                   :integer
+#  scale15                   :integer
+#  scale16                   :integer
 #  created_at                :datetime
 #  updated_at                :datetime
 #  elevation                 :string(255)
@@ -38,6 +54,14 @@
 #  options6                  :string(255)
 #  options7                  :string(255)
 #  options8                  :string(255)
+#  options9                  :string(255)
+#  options10                 :string(255)
+#  options11                 :string(255)
+#  options12                 :string(255)
+#  options13                 :string(255)
+#  options14                 :string(255)
+#  options15                 :string(255)
+#  options16                 :string(255)
 #  social                    :boolean          default(FALSE)
 #  slug                      :string(255)
 #  status                    :string(255)
@@ -173,7 +197,7 @@ describe Channel do
     end
 
     it 'has an incorrect field' do
-      Channel.value_from_string("channel_#{@channel.id}_field_8", @user).should eq(nil)
+      Channel.value_from_string("channel_#{@channel.id}_field_16", @user).should eq(nil)
     end
   end
 end

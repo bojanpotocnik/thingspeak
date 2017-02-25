@@ -8,6 +8,14 @@ class ChangeChannelFieldsToStrings < ActiveRecord::Migration
 		change_column :channels, :field6, :string
 		change_column :channels, :field7, :string
 		change_column :channels, :field8, :string
+		change_column :channels, :field9, :string
+		change_column :channels, :field10, :string
+		change_column :channels, :field11, :string
+		change_column :channels, :field12, :string
+		change_column :channels, :field13, :string
+		change_column :channels, :field14, :string
+		change_column :channels, :field15, :string
+		change_column :channels, :field16, :string
 		change_column :channels, :options1, :string
 		change_column :channels, :options2, :string
 		change_column :channels, :options3, :string
@@ -16,6 +24,14 @@ class ChangeChannelFieldsToStrings < ActiveRecord::Migration
 		change_column :channels, :options6, :string
 		change_column :channels, :options7, :string
 		change_column :channels, :options8, :string
+		change_column :channels, :options9, :string
+		change_column :channels, :options10, :string
+		change_column :channels, :options11, :string
+		change_column :channels, :options12, :string
+		change_column :channels, :options13, :string
+		change_column :channels, :options14, :string
+		change_column :channels, :options15, :string
+		change_column :channels, :options16, :string
   end
 
   def self.down
@@ -27,6 +43,14 @@ class ChangeChannelFieldsToStrings < ActiveRecord::Migration
 		change_column :channels, :field6, :text
 		change_column :channels, :field7, :text
 		change_column :channels, :field8, :text
+		change_column :channels, :field9, :text
+		change_column :channels, :field10, :text
+		change_column :channels, :field11, :text
+		change_column :channels, :field12, :text
+		change_column :channels, :field13, :text
+		change_column :channels, :field14, :text
+		change_column :channels, :field15, :text
+		change_column :channels, :field16, :text
 		change_column :channels, :options1, :text
 		change_column :channels, :options2, :text
 		change_column :channels, :options3, :text
@@ -35,5 +59,13 @@ class ChangeChannelFieldsToStrings < ActiveRecord::Migration
 		change_column :channels, :options6, :text
 		change_column :channels, :options7, :text
 		change_column :channels, :options8, :text
+		change_column :channels, :options9, :text
+		change_column :channels, :options10, :text
+		change_column :channels, :options11, :text
+		change_column :channels, :options12, :text
+		change_column :channels, :options13, :text
+		change_column :channels, :options14, :text
+		change_column :channels, :options15, :text
+		change_column :channels, :options16, :text
   end
 end

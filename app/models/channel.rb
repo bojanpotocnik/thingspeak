@@ -16,6 +16,14 @@
 #  field6                    :string(255)
 #  field7                    :string(255)
 #  field8                    :string(255)
+#  field9                    :string(255)
+#  field10                   :string(255)
+#  field11                   :string(255)
+#  field12                   :string(255)
+#  field13                   :string(255)
+#  field14                   :string(255)
+#  field15                   :string(255)
+#  field16                   :string(255)
 #  scale1                    :integer
 #  scale2                    :integer
 #  scale3                    :integer
@@ -24,6 +32,14 @@
 #  scale6                    :integer
 #  scale7                    :integer
 #  scale8                    :integer
+#  scale9                    :integer
+#  scale10                   :integer
+#  scale11                   :integer
+#  scale12                   :integer
+#  scale13                   :integer
+#  scale14                   :integer
+#  scale15                   :integer
+#  scale16                   :integer
 #  created_at                :datetime
 #  updated_at                :datetime
 #  elevation                 :string(255)
@@ -37,6 +53,14 @@
 #  options6                  :string(255)
 #  options7                  :string(255)
 #  options8                  :string(255)
+#  options9                  :string(255)
+#  options10                 :string(255)
+#  options11                 :string(255)
+#  options12                 :string(255)
+#  options13                 :string(255)
+#  options14                 :string(255)
+#  options15                 :string(255)
+#  options16                 :string(255)
 #  social                    :boolean          default(FALSE)
 #  slug                      :string(255)
 #  status                    :string(255)
@@ -174,6 +198,14 @@ class Channel < ActiveRecord::Base
     only += [:field6] if self.field6.present?
     only += [:field7] if self.field7.present?
     only += [:field8] if self.field8.present?
+    only += [:field9] if self.field9.present?
+    only += [:field10] if self.field10.present?
+    only += [:field11] if self.field11.present?
+    only += [:field12] if self.field12.present?
+    only += [:field13] if self.field13.present?
+    only += [:field14] if self.field14.present?
+    only += [:field15] if self.field15.present?
+    only += [:field16] if self.field16.present?
 
     # return a hash
     return { :only => only }
@@ -289,7 +321,9 @@ class Channel < ActiveRecord::Base
   # check if the any of the fields have changed
   def fields_changed?
     field1_changed? || field2_changed? || field3_changed? || field4_changed? ||
-      field5_changed? || field6_changed? || field7_changed? || field8_changed?
+      field5_changed? || field6_changed? || field7_changed? || field8_changed? ||
+      field9_changed? || field10_changed? || field11_changed? || field12_changed? ||
+      field13_changed? || field14_changed? || field15_changed? || field16_changed?
   end
 
   # update the chart windows

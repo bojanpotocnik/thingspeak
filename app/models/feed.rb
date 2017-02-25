@@ -12,6 +12,14 @@
 #  field6     :string(255)
 #  field7     :string(255)
 #  field8     :string(255)
+#  field9     :string(255)
+#  field10    :string(255)
+#  field11    :string(255)
+#  field12    :string(255)
+#  field13    :string(255)
+#  field14    :string(255)
+#  field15    :string(255)
+#  field16    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #  entry_id   :integer
@@ -64,6 +72,14 @@ class Feed < ActiveRecord::Base
     only += [:field6] unless channel.field6.blank? or (params[:field_id] and !params[:field_id].index('6'))
     only += [:field7] unless channel.field7.blank? or (params[:field_id] and !params[:field_id].index('7'))
     only += [:field8] unless channel.field8.blank? or (params[:field_id] and !params[:field_id].index('8'))
+    only += [:field9] unless channel.field9.blank? or (params[:field_id] and !params[:field_id].index('9'))
+    only += [:field10] unless channel.field10.blank? or (params[:field_id] and !params[:field_id].index('10'))
+    only += [:field11] unless channel.field11.blank? or (params[:field_id] and !params[:field_id].index('11'))
+    only += [:field12] unless channel.field12.blank? or (params[:field_id] and !params[:field_id].index('12'))
+    only += [:field13] unless channel.field13.blank? or (params[:field_id] and !params[:field_id].index('13'))
+    only += [:field14] unless channel.field14.blank? or (params[:field_id] and !params[:field_id].index('14'))
+    only += [:field15] unless channel.field15.blank? or (params[:field_id] and !params[:field_id].index('15'))
+    only += [:field16] unless channel.field16.blank? or (params[:field_id] and !params[:field_id].index('16'))
 
     # add geolocation data if necessary
     if params[:location] and params[:location].upcase == 'TRUE'

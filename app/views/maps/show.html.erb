@@ -13,7 +13,7 @@
       };
       var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
       var bounds = new google.maps.LatLngBounds();
-      var lat, lng, latlng, marker, title, field1, field2, field3, field4, field5, field6, field7, field8;
+      var lat, lng, latlng, marker, title, field1, field2, field3, field4, field5, field6, field7, field8, field9, field10, field11, field12, field13, field14, field15, field16;
 
       // get the data with a webservice call
       $.getJSON('<%= "#{@domain}channels/#{params[:channel_id]}/feed.json?callback=?&location=true&offset=0#{@qs}" %>', function(data) {
@@ -31,6 +31,14 @@
         if (data.channel.field6) { field6 = data.channel.field6; }
         if (data.channel.field7) { field7 = data.channel.field7; }
         if (data.channel.field8) { field8 = data.channel.field8; }
+        if (data.channel.field9) { field9 = data.channel.field9; }
+        if (data.channel.field10) { field10 = data.channel.field10; }
+        if (data.channel.field11) { field11 = data.channel.field11; }
+        if (data.channel.field12) { field12 = data.channel.field12; }
+        if (data.channel.field13) { field13 = data.channel.field13; }
+        if (data.channel.field14) { field14 = data.channel.field14; }
+        if (data.channel.field15) { field15 = data.channel.field15; }
+        if (data.channel.field16) { field16 = data.channel.field16; }
 
         // iterate through each feed
         $.each(data.feeds, function() {
@@ -49,6 +57,15 @@
             if (this.field6) { title += field6 + ': ' + this.field6 + '\n'; }
             if (this.field7) { title += field7 + ': ' + this.field7 + '\n'; }
             if (this.field8) { title += field8 + ': ' + this.field8 + '\n'; }
+            if (this.field9) { title += field9 + ': ' + this.field9 + '\n'; }
+            if (this.field10) { title += field10 + ': ' + this.field10 + '\n'; }
+            if (this.field11) { title += field11 + ': ' + this.field11 + '\n'; }
+            if (this.field12) { title += field12 + ': ' + this.field12 + '\n'; }
+            if (this.field13) { title += field13 + ': ' + this.field13 + '\n'; }
+            if (this.field14) { title += field14 + ': ' + this.field14 + '\n'; }
+            if (this.field15) { title += field15 + ': ' + this.field15 + '\n'; }
+            if (this.field16) { title += field16 + ': ' + this.field16 + '\n'; }
+            if (this.status) { title += this.status; }
             if (this.status) { title += this.status; }
             marker = new google.maps.Marker({
                 position: latlng,
@@ -96,6 +113,14 @@
                 if (data.field6) { title += field6 + ': ' + data.field6 + '\n'; }
                 if (data.field7) { title += field7 + ': ' + data.field7 + '\n'; }
                 if (data.field8) { title += field8 + ': ' + data.field8 + '\n'; }
+                if (data.field9) { title += field9 + ': ' + data.field9 + '\n'; }
+                if (data.field10) { title += field10 + ': ' + data.field10 + '\n'; }
+                if (data.field11) { title += field11 + ': ' + data.field11 + '\n'; }
+                if (data.field12) { title += field12 + ': ' + data.field12 + '\n'; }
+                if (data.field13) { title += field13 + ': ' + data.field13 + '\n'; }
+                if (data.field14) { title += field14 + ': ' + data.field14 + '\n'; }
+                if (data.field15) { title += field15 + ': ' + data.field15 + '\n'; }
+                if (data.field16) { title += field16 + ': ' + data.field16 + '\n'; }
                 if (data.status) { title += data.status; }
                 marker = new google.maps.Marker({
                     position: latlng,
